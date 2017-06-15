@@ -1,0 +1,235 @@
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.main-sidebar {
+    float: left;
+    width: 350px;
+    height: 600px;
+    min-height: 100%;
+    display: block;
+    transition: transform .3s cubic-bezier(.32, 1.25, .375, 1.15);
+}
+
+.main-sidebar {
+    background-color: green;
+}
+
+#sidebar {
+    width: 280px;
+    position: fixed;
+    top: 42px;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: white;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    background: white;
+    margin-left: -280px;
+}
+
+#sidebar-header {
+    float: left;
+    width: 280px;
+    height: 80px;
+    background: #830050;
+    color: #fff;
+}
+
+#sidebar-item {
+    width: 100%;
+    height: Calc(100vh - 162px);
+    color: #fff;
+    transition: all 0.3s;
+}
+
+
+/* ---------------------------------------------------
+    SIDEBAR BUTTON STYLE
+----------------------------------------------------- */
+
+.btn_container {
+    width: 100%;
+    float: left;
+}
+
+[id*="btn_"] {
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+div#btn_all, div#btn_boards {
+    height: 70px;
+    width: 28%;
+}
+
+div#btn_messenger {
+    height: 70px;
+    width: 44%;
+}
+
+div.callout {
+    background-color: #830050;
+    position: relative;
+    color: #fff;
+    padding: 10px;
+    min-height: 50px;
+    transition: all 0.3s;
+}
+
+.callout::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 0.8em solid transparent;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.callout.top::before {
+    left: 39%;
+    bottom: -19px;
+    border-top: 10px solid #830050;
+}
+
+.callout.topm::before {
+    left: 25%;
+    bottom: -19px;
+    border-top: 10px solid #830050;
+}
+
+div.callout:hover, div.btn_active {
+    background-color: #cf0072;
+}
+
+div.btn_active.top::before, div.btn_active.topm::before, div.callout.top:hover::before, div.callout.topm:hover::before {
+    border-top: 10px solid #cf0072;
+}
+
+.sidebar_plus {
+    position: absolute;
+    z-index: 2000;
+    top: 20px;
+    left: 240px;
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 11px;
+    border-radius: 20px;
+    background-color: #aa0061;
+}
+
+.sidebar_plus:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 11px 3px rgba(133,130,133,0.5);
+    background-color: #cf0072;    
+}
+
+.sidebar-search {
+    position: relative;
+    z-index: -500;
+    top: 0;
+}
+
+.stylish-input-group .form-control{
+    border-right:0; 
+    box-shadow:0 0 0; 
+    border-color:#ccc;
+    height: 50px;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR ITEM STYLES
+----------------------------------------------------- */
+
+div#sidebar-item > ul.list-group {
+    width: 101.7%;
+    color: #4b6d89;
+    font-size: 13px;
+    position: relative;
+    left: -5px;
+}
+
+div#sidebar-item > ul.list-group > li > i, div#sidebar-item > ul.list-group > li > b{
+    cursor: pointer;
+}
+
+div#sidebar-item > ul.list-group > li > ul {
+    font-size: 11px;
+    list-style-type: none;
+    position: relative;
+    top: 15px;
+    left: -20px;
+}
+
+div#sidebar-item > ul.list-group > li > i {
+    font-size: 15px;
+}
+
+div#sidebar-item > ul.list-group > li.activated, div#sidebar-item > ul.list-group > li:hover {
+    background-color: #fff2df;
+}
+
+#sidebar-list-title.activated, #sidebar-list-title:hover {
+    color: #cf0170;
+}
+
+span.text-muted {
+    font-size: 9px;
+    margin-right: -15px;
+}
+
+[id*="sub_list_"] {
+    width: 130%;
+    margin-left: -30px;
+    padding: 5px 25px 2px 30px;
+}
+
+[id*="sub_list_"]:hover {
+    cursor: pointer;
+    background-color: #e9e9e9;
+}
+
+ul.sub_menu > li:not(:first-child) {
+    padding-top: 10px;
+}
+
+ul.sub_menu > li:not(:last-child) > .for_border{
+    width: 30%;
+    border-bottom:2px solid;
+    border-image:
+      linear-gradient(to right, #ccc, rgba(0, 0, 0, 0)) .5;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 767px) {
+
+    /*  sidebar  */
+    #sidebar {
+        margin-left: -280px;
+        position: fixed;
+        top: 80px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+

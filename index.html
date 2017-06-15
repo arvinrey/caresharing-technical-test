@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Caresharing Inc. Technical Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap v3.3.7 -->
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="resources/css/main-styles.css">
+    <!-- header css -->
+    <link rel="stylesheet" href="resources/css/header.css">
+    <!-- sidebar css -->
+    <link rel="stylesheet" href="resources/css/sidebar.css">
+    <!-- content css -->
+    <link rel="stylesheet" href="resources/css/content.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+</head>
+
+<body>
+    <!-- container section start -->
+    <section class="main-container">
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                header 
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+        <header class="main-header navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <nav class="nav-left pull-left">
+                <div class="nav-left-container">
+                    <button type="button" id="sidebar_collapse" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <div class="header-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="header-search-field" value="Zoek patient" placeholder="Search here">
+                            <span class="input-group-btn">
+                                <button class="btn btn-flat" id="btn-search">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                                <button class="btn btn-flat" id="btn-add">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- nav-left close -->
+
+            <nav class="nav-right">
+                <ul id="nav" class="nav navbar-top-links navbar-right">
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <b><i style="font-size:20px; color:#830050" class="fa fa-bars fa-fw"></i></b>
+                            <span class="btn_badge notif_count_task">2</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-tasks">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p>
+                                            <strong>Task 1</strong>
+                                            <span class="pull-right text-muted">40% Complete</span>
+                                        </p>
+                                        <div class="progress progress-striped active" id="progress_bar">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                <span class="sr-only">40% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p>
+                                            <strong>Task 2</strong>
+                                            <span class="pull-right text-muted">20% Complete</span>
+                                        </p>
+                                        <div class="progress progress-striped active" id="progress_bar">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Tasks</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-tasks -->
+                    </li>
+                    <!-- /.dropdown -->
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <b><i style="font-size:20px; color:#830050" class="fa fa-comment-o" aria-hidden="true"></i></b>
+                            <span class="btn_badge notif_count_message hidden">2</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i> New Comment
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-alerts -->
+                    </li>
+                    <!-- /.dropdown -->
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <b><i style="font-size:20px; color:#830050" class="fa fa-envelope-o fa-fw"></i></b>
+                            <span class="btn_badge notif_count_inbox hidden">2</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i> New Comment
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-alerts -->
+                    </li>
+                    <!-- /.dropdown -->
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span id="user_name">Harm Patoc</span>
+                            <b><i style="font-size:20px; color:#830050" class="fa fa-user-circle fa-fw"></i></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user close-->
+                    </li>
+                    <!-- /.dropdown close-->
+                </ul>
+            </nav>
+            <!-- /.nav-right close -->
+        </header>      
+        <!-- /header close -->
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                sidebar 
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+        <!-- Sidebar Holder -->
+        <aside id="sidebar">
+            <div class="sidebar-header">
+                <div class="btn_container">
+                    <div class="callout top btn_active" id="btn_all">
+                        <i style="font-size:20px; margin-top: 10px;" class="fa fa-list-alt" aria-hidden="true"></i><br>ALL
+                    </div>
+                    <div class="callout top" id="btn_boards">
+                        <i style="font-size:20px; margin-top: 10px;" class="fa fa-address-book" aria-hidden="true"></i><br>BOARDS
+                    </div>
+                    <div class="callout topm" id="btn_messenger">
+                        <i style="font-size:20px; margin-top: 10px; margin-left:-50px" class="fa fa-comment-o" aria-hidden="true"></i><br>
+                        <p style="margin-left:-40px">MESSENGER</p>
+                    </div>
+                    <div class="sidebar_plus">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- /.sidebar-header close -->
+
+            <div class="sidebar-search">
+                <div class="input-group stylish-input-group">
+                    <input type="text" style="border-radius:0; border: 0; border-bottom:solid 1px #ccc; font-size:12px; color:#CCC" class="form-control" value="Zoek" placeholder="Search" >
+                    <span style="border-radius:0; border: 0; border-bottom:solid 1px #ccc;" class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search" style="color: #CCC"></span>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+            <!-- /.sidebar-search close -->
+
+            <div id="sidebar-item">
+                
+                <ul class="list-group">
+                    
+                    <li class="list-group-item" id="list_1">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <b id="sidebar-list-title">Patient 10, zgwaHaPraktijk15</b>
+                        <ul class="sub_menu">
+                            <li class="" id="sub_list_1">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Ziektelastmeter</b>
+                                <span class="pull-right text-muted">13:25</span>
+                                <p> Jij: Harm Patoc heeft tomaz.maggot.7@c...</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_2">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Test theme</b>
+                                <span class="pull-right text-muted">3 maanden geleden</span>
+                                <p> Jij: Harm Patoc heeft Naron Mumar toeg...</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_3">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Blanco</b>
+                                <p></p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_4">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Blanco</b>
+                                <p></p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_5">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Extra theme (all included)</b>
+                                <p></p>
+                                <div class="for_border"></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="list-group-item" id="list_2">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <b id="sidebar-list-title">Thiel, Dorien</b>
+                        <ul class="sub_menu">
+                            <li class="" id="sub_list_1">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Diabetesdagboek</b>
+                                <span class="pull-right text-muted">een dag geleden</span>
+                                <p>Test: Test 070617 heeft de uitnodiging g...</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_2">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Positieve gezondheid</b>
+                                <span class="pull-right text-muted">13 dagen geleden</span>
+                                <p>Jos: Jos Rietjens heeft Harm Patoc toege...</p>
+                                <div class="for_border"></div>
+                            </li>
+                        </ul>
+                    </li> 
+
+                    <!-- i set this list to active by default since it is what on the design -->
+                    <li class="list-group-item activated" id="list_3">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <b class="activated" id="sidebar-list-title">Patient 90, BoardsHaPraktijk20</b>
+                        <ul class="sub_menu">
+                            <li class="" id="sub_list_1">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Medicatiebeoordeling</b>
+                                <span class="pull-right text-muted">een dag geleden</span>
+                                <p>Jij: Harm Patoc heeft testranslations@c...</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_2">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Ziektelastmeter</b>
+                                <span class="pull-right text-muted">8 dagen geleden</span>
+                                <p>Harm: Harm Video 4 heeft de uitnodigin...</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_3">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Diabetesdagboek</b>
+                                <span class="pull-right text-muted">8 dagen geleden</span>
+                                <p>Jij: test2</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_4">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>GGZ Jeugd</b>
+                                <span class="pull-right text-muted">een maand geleden</span>
+                                <p>Jij: test2</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_5">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Positieve gezondheid</b>
+                                <span class="pull-right text-muted"></span>
+                                <p></p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_6">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Ouderenzorg</b>
+                                <span class="pull-right text-muted"></span>
+                                <p></p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_7">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Wondzorg</b>
+                                <span class="pull-right text-muted"></span>
+                                <p></p>
+                                <div class="for_border"></div>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li class="list-group-item" id="list_4">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <b id="sidebar-list-title">Patient 57, zgwaHaPraktijk15</b>
+                        <ul class="sub_menu">
+                            <li class="" id="sub_list_1">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Ziektelastmeter</b>
+                                <span class="pull-right text-muted">7 dagen geleden</span>
+                                <p>Jij: test</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_2">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Positieve gezondheid</b>
+                                <span class="pull-right text-muted">een maand geleden</span>
+                                <p>Rik: Rik Koekenbier heeft Arno Noteboo...</p>
+                                <div class="for_border"></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item" id="list_5">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <b id="sidebar-list-title">Glucose, Test</b>
+                        <ul class="sub_menu">
+                            <li class="" id="sub_list_1">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Diabetesdagboek</b>
+                                <span class="pull-right text-muted">8 dagen geleden</span>
+                                <p>Jij: test</p>
+                                <div class="for_border"></div>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li class="list-group-item" id="list_6">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <b id="sidebar-list-title">Glucose, Test</b>
+                        <ul class="sub_menu">
+                            <li class="" id="sub_list_1">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Diabetesdagboek</b>
+                                <span class="pull-right text-muted">8 dagen geleden</span>
+                                <p>Jij: test</p>
+                                <div class="for_border"></div>
+                            </li>
+                            <li class="" id="sub_list_2">
+                                <i class="fa fa-newspaper-o"></i>
+                                <b>Wondzorg</b>
+                                <span class="pull-right text-muted">8 dagen geleden</span>
+                                <p>Jij: test</p>
+                                <div class="for_border"></div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-item close -->
+        </aside>
+        <!-- /aside close -->
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                content 
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+        <!-- Page Content Holder -->
+        <section id="content">
+            <div class="panel_1">
+                <div id="panelTitle"><b>Ziektelastmeter</b></div>
+                <div id="panelDesc">Laatste bericht: 8 dagen geleden</div>
+                <br>
+                <div class="row">
+                    <div id="name1-container">
+                        <div class="line-left"></div>
+                        <div id="name1">Beheerder</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card_circle">
+                        HP<br><i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="name2-container">
+                        <div class="line-left"></div>
+                        <div id="name2">Deelnemers</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row card_footer">
+                    <center>
+                        <div class="card_circle">MR</div>
+                        <div class="card_circle">HZ</div>
+                        <div class="card_circle">BR</div>
+                        <div class="card_circle">
+                            <i class="fa fa-plus" aria-hidden="true"></i><p>more</p>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <!-- /.panel_1 close -->
+
+            <div class="panel_2">
+                <div id="panelTitle"><b>Ouderenzorg</b></div>
+                <div id="panelDesc">Laatste bericht: -</div>
+                <br>
+                <div class="row">
+                    <div id="name1-container">
+                        <div class="line-left"></div>
+                        <div id="name1">Beheerder</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card_circle">
+                        HP<br><i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="name2-container">
+                        <div class="line-left"></div>
+                        <div id="name2">Deelnemers</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row card_footer">
+                    <center>
+                        <i>Geen deelnemers</i>
+                    </center>
+                </div>
+            </div>
+            <!-- /.panel_2 close -->
+
+            <div class="panel_3">
+                <div id="panelTitle"><b>Wondzorg</b></div>
+                <div id="panelDesc">Laatste bericht: -</div>
+                <br>
+                <div class="row">
+                    <div id="name1-container">
+                        <div class="line-left"></div>
+                        <div id="name1">Beheerder</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card_circle">
+                        HP<br><i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="name2-container">
+                        <div class="line-left"></div>
+                        <div id="name2">Deelnemers</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row card_footer">
+                    <center>
+                        <i>Geen deelnemers</i>
+                    </center>
+                </div>
+            </div>
+            <!-- /.panel_3 close -->
+
+            <div class="panel_4">
+                <div id="panelTitle"><b>Positieve gezondheide</b></div>
+                <div id="panelDesc">Laatste bericht: -</div>
+                <br>
+                <div class="row">
+                    <div id="name1-container">
+                        <div class="line-left"></div>
+                        <div id="name1">Beheerder</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card_circle">
+                        HP<br><i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="name2-container">
+                        <div class="line-left"></div>
+                        <div id="name2">Deelnemers</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row card_footer">
+                    <center>
+                        <i>Geen deelnemers</i>
+                    </center>
+                </div>
+            </div>
+            <!-- /.panel_4 close -->
+
+            <div class="panel_5">
+                <div id="panelTitle"><b>GGZ Jeugd</b></div>
+                <div id="panelDesc">Laatste bericht: een maand</div>
+                <br>
+                <div class="row">
+                    <div id="name1-container">
+                        <div class="line-left"></div>
+                        <div id="name1">Beheerder</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card_circle">
+                        HP<br><i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="name2-container">
+                        <div class="line-left"></div>
+                        <div id="name2">Deelnemers</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row card_footer">
+                    <center>
+                        <i>Geen deelnemers</i>
+                    </center>
+                </div>
+            </div>
+            <!-- /.panel_5 close -->
+
+            <div class="panel_6">
+                <div id="panelTitle"><b>Diabetesdagboek</b></div>
+                <div id="panelDesc">Laatste bericht: 8 dagen geleden</div>
+                <br>
+                <div class="row">
+                    <div id="name1-container">
+                        <div class="line-left"></div>
+                        <div id="name1">Beheerder</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card_circle">
+                        HP<br><i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="name2-container">
+                        <div class="line-left"></div>
+                        <div id="name2">Deelnemers</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row card_footer">
+                    <center>
+                        <i>Geen deelnemers</i>
+                    </center>
+                </div>
+            </div>
+            <!-- /.panel_6 close -->
+
+            <div class="panel_7">
+                <div id="panelTitle"><b>Medicatiebeoordeling</b></div>
+                <div id="panelDesc">Laatste bericht: 8 dagen geleden</div>
+                <br>
+                <div class="row">
+                    <div id="name1-container">
+                        <div class="line-left"></div>
+                        <div id="name1">Beheerder</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card_circle">
+                        HP<br><i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="name2-container">
+                        <div class="line-left"></div>
+                        <div id="name2">Deelnemers</div>
+                        <div class="line-right"></div>
+                    </div>
+                </div>
+                <div class="row card_footer">
+                    <center>
+                        <div class="card_circle">TH</div>
+                    </center>
+                </div>
+            </div>
+            <!-- /.panel_7 close -->
+
+            <div class="panel_add">
+                <i class="glyphicon glyphicon-plus"></i>
+                <p><b>Board toevoegen</b></p>
+            </div>
+
+        </section>
+        <!-- /section content close -->
+    </section>
+    <!-- /section main container close -->
+
+    <!-- jQuery CDN -->
+    <script src="resources/js/jquery/jquery.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- sidebar js -->
+    <script src="resources/js/sidebar.js"></script>
+    <!-- jQuery Nicescroll CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+</body>
+
+</html>
